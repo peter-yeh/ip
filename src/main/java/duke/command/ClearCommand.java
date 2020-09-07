@@ -12,6 +12,7 @@ import duke.utils.Ui;
 public class ClearCommand extends Command {
     protected static List<String> aliases;
 
+
     @Override
     public void execute(TaskList tasks, Ui ui, DukeFileHandler fileHandler) throws DukeException {
         tasks.clear();

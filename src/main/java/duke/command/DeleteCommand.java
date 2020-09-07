@@ -1,17 +1,16 @@
 package duke.command;
 
+import java.util.List;
+
 import duke.utils.DukeException;
 import duke.utils.DukeFileHandler;
 import duke.utils.TaskList;
 import duke.utils.Ui;
 
-import java.util.ArrayList;
-import java.util.List;
-
 
 public class DeleteCommand extends Command {
-    private final int indexEntryToDelete;
     protected static List<String> aliases;
+    private final int indexEntryToDelete;
 
 
     public DeleteCommand(int indexEntryToDelete) {
@@ -29,4 +28,6 @@ public class DeleteCommand extends Command {
             throw new DukeException("This task does not exist");
         }
     }
+
+
 }

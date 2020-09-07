@@ -1,18 +1,16 @@
 package duke.command;
 
+import java.util.List;
+
 import duke.utils.DukeException;
 import duke.utils.DukeFileHandler;
 import duke.utils.TaskList;
 import duke.utils.Ui;
 
-import java.util.ArrayList;
-import java.util.List;
-
 
 public class DoneCommand extends Command {
-    private final int indexEntryDone;
-
     protected static List<String> aliases;
+    private final int indexEntryDone;
 
     public DoneCommand(int indexEntryDone) {
         this.indexEntryDone = indexEntryDone;
@@ -29,4 +27,6 @@ public class DoneCommand extends Command {
             throw new DukeException("This task does not exist");
         }
     }
+
+
 }

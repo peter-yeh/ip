@@ -38,11 +38,9 @@ class ParserTest {
 
 
     @Test
-    public void testOneKeywordIsEntered(){
+    public void testOneKeywordIsEntered() {
 
     }
-
-
 
 
 }

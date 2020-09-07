@@ -1,6 +1,5 @@
 package duke.utils;
 
-import duke.Duke;
 import duke.command.ClearCommand;
 import duke.command.Command;
 import duke.command.CommandType;
@@ -33,7 +32,7 @@ public class Parser {
             throw new DukeException("Please type a duke command");
         }
 
-        String[] keywords = findKeywords(input.trim());
+        String[] keywords = extractKeywords(input.trim());
         CommandType commandType = Command.containsKeyword(keywords[0]);
 
         switch (commandType) {
@@ -90,7 +89,7 @@ public class Parser {
      * @param stringToConvert the string to be converted.
      * @return array with commands.
      */
-    private static String[] findKeywords(String stringToConvert) {
+    private static String[] extractKeywords(String stringToConvert) {
         return stringToConvert.split(" ");
     }
 
