@@ -41,9 +41,7 @@ public class Duke {
 
     public void enteredInput(String input) {
         try {
-            Command command = Parser.parse(input);
-            command.execute(tasks, ui, fileHandler);
-
+            Parser.parse(input).execute(tasks, ui, fileHandler);
 
         } catch (DukeException ex) {
             ui.displayThis(ex.getMessage());
