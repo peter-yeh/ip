@@ -21,7 +21,8 @@ public class RenameCommand extends Command {
 
     @Override
     public void execute(TaskList tasks, Ui ui, DukeFileHandler fileHandler) throws DukeException {
-
+        // todo get the alias list from the command class
+        // todo add the new keyword inside
     }
 
 
