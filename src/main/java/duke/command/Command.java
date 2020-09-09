@@ -14,7 +14,8 @@ import duke.utils.Ui;
  * Corresponds to commands the users wants to execute.
  */
 public abstract class Command {
-
+    // todo convert these tasks to static classes.
+    // todo call the execute without needing to create a new instance.
 
     /**
      * Uses polymorphism to execute the methods relevant to the Command.
@@ -25,6 +26,9 @@ public abstract class Command {
      * @throws DukeException Throws DukeException which must be caught by the method.
      */
     public abstract void execute(TaskList tasks, Ui ui, DukeFileHandler fileHandler) throws DukeException;
+
+
+    // protected abstract List<String> getAliases();
 
 
     public static CommandType containsKeyword(String commandKeyword) {
@@ -50,7 +54,6 @@ public abstract class Command {
             Main.getWindow().showsToDialog("The keyword got is: " + commandKeyword);
             return CommandType.UNKNOWN;
         }
-
     }
 
 
@@ -65,6 +68,8 @@ public abstract class Command {
 
 
     public static void initialise() {
+        // todo read from storage to get the user prefs for alias
+        // todo makes each command initialise it's own alias via setter
         ClearCommand.aliases = new ArrayList<>();
         ClearCommand.aliases.add("c");
         ClearCommand.aliases.add("clear");
